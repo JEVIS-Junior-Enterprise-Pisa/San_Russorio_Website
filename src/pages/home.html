@@ -1,15 +1,15 @@
 <!-- Hero Section -->
 <section class="relative h-screen">
-  <div class="absolute inset-0 bg-black opacity-30 z-10"></div>
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 z-10"></div>
+  <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 z-10"></div>
   <img src="/src/assets/hero-image.jpg" alt="B&B San Russorio" class="absolute inset-0 w-full h-full object-cover">
 
   <div
     class="relative z-20 container mx-auto px-6 h-full flex flex-col justify-center items-center text-white text-center">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Benvenuti al B&B San Russorio</h1>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 font-serif">Benvenuti al B&B San Russorio</h1>
     <p class="text-xl md:text-2xl mb-8 max-w-2xl">Vivi l'autentica ospitalità toscana nel cuore di Pisa</p>
     <a href="/rooms"
-      class="bg-primary hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300">
+      class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 shadow-md">
       Scopri le nostre camere
     </a>
   </div>
@@ -21,10 +21,10 @@
     <div class="flex flex-col md:flex-row items-center gap-12">
       <div class="md:w-1/2">
         <img src="/src/assets/about-image.jpg" alt="Chi siamo - B&B San Russorio"
-          class="rounded-lg shadow-lg w-full h-auto">
+          class="rounded-lg shadow-xl w-full h-auto border-4 border-white">
       </div>
       <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold mb-6 text-primary">La nostra storia</h2>
+        <h2 class="text-3xl font-bold mb-6 text-primary font-serif">La nostra storia</h2>
         <p class="text-gray-700 mb-4">
           Situato a Pisa, una città ricca di storia e cultura, il B&B San Russorio offre un rifugio accogliente e
           rilassante, ideale per chi desidera esplorare le bellezze toscane. La nostra struttura a conduzione familiare
@@ -35,7 +35,7 @@
           al XIX secolo, è stato restaurato con cura per preservare il suo fascino storico, arricchito da dettagli unici
           e opere d'arte locali.
         </p>
-        <a href="/chi-siamo" class="text-primary font-medium hover:underline inline-flex items-center">
+        <a href="/chi-siamo" class="text-primary font-medium hover:text-primary-dark transition-colors duration-300 inline-flex items-center">
           Scopri di più su di noi
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
@@ -49,63 +49,63 @@
 </section>
 
 <!-- Sezione Camere in Evidenza -->
-<section class="py-16">
+<section class="py-16 bg-secondary bg-opacity-30">
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-primary mb-4">Camere in Evidenza</h2>
+      <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Camere in Evidenza</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Scopri le nostre camere, ognuna pensata per offrire comfort, stile e un
         tocco autentico della tradizione toscana.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Camera 1 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+      <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 border-t-4 border-primary">
         <img src="/src/assets/room1.jpg" alt="Camera Oliva" class="w-full h-64 object-cover">
         <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Camera Oliva</h3>
+          <h3 class="text-xl font-bold text-primary mb-2 font-serif">Camera Oliva</h3>
           <p class="text-gray-600 mb-4">Ampia camera con letto matrimoniale e balcone privato che si affaccia sui
             rigogliosi uliveti.</p>
           <div class="flex justify-between items-center">
             <span class="text-primary font-bold">€120 / notte</span>
             <a href="/rooms"
-              class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition-colors">Dettagli</a>
+              class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors shadow-md">Dettagli</a>
           </div>
         </div>
       </div>
 
       <!-- Camera 2 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+      <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 border-t-4 border-primary">
         <img src="/src/assets/room2.jpg" alt="Suite Arno" class="w-full h-64 object-cover">
         <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Suite Arno</h3>
+          <h3 class="text-xl font-bold text-primary mb-2 font-serif">Suite Arno</h3>
           <p class="text-gray-600 mb-4">Suite di lusso con letto king-size, area salotto e viste panoramiche sul fiume
             Arno e sulla città.</p>
           <div class="flex justify-between items-center">
             <span class="text-primary font-bold">€180 / notte</span>
             <a href="/rooms"
-              class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition-colors">Dettagli</a>
+              class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors shadow-md">Dettagli</a>
           </div>
         </div>
       </div>
 
       <!-- Camera 3 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+      <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 border-t-4 border-primary">
         <img src="/src/assets/room3.jpg" alt="Camera Giardino" class="w-full h-64 object-cover">
         <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Camera Giardino</h3>
+          <h3 class="text-xl font-bold text-primary mb-2 font-serif">Camera Giardino</h3>
           <p class="text-gray-600 mb-4">Camera accogliente con accesso diretto al nostro incantevole giardino, ideale
             per gli amanti della natura.</p>
           <div class="flex justify-between items-center">
             <span class="text-primary font-bold">€140 / notte</span>
             <a href="/rooms"
-              class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition-colors">Dettagli</a>
+              class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors shadow-md">Dettagli</a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="text-center mt-10">
-      <a href="/rooms" class="inline-flex items-center text-primary font-medium hover:underline">
+      <a href="/rooms" class="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors duration-300">
         Visualizza tutte le camere
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd"
@@ -121,14 +121,14 @@
 <section class="py-16 bg-secondary">
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-primary mb-4">Cosa Dicono di Noi</h2>
+      <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Cosa Dicono di Noi</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Leggi le esperienze dei nostri ospiti che hanno scelto il B&B San
         Russorio per il loro soggiorno a Pisa.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Recensione 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-2 border-primary">
         <div class="flex items-center mb-4">
           <div class="text-yellow-400 flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -158,7 +158,7 @@
       </div>
 
       <!-- Recensione 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-2 border-primary">
         <div class="flex items-center mb-4">
           <div class="text-yellow-400 flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -230,26 +230,28 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Membro 1: Giovanni -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-b-2 border-primary">
         <img src="/src/assets/team-giovanni.jpg" alt="Giovanni - Receptionist"
-          class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="text-xl font-bold text-primary">Giovanni</h3>
+          class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary">
+        <h3 class="text-xl font-bold text-primary font-serif">Giovanni</h3>
         <p class="text-gray-600">Receptionist giovane e motivato con 4 anni di esperienza, sempre pronto ad accoglierti
           con professionalità.</p>
       </div>
+      
       <!-- Membro 2: Norma -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-b-2 border-primary">
         <img src="/src/assets/team-norma.jpg" alt="Norma - Cuoca"
-          class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="text-xl font-bold text-primary">Norma</h3>
+          class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary">
+        <h3 class="text-xl font-bold text-primary font-serif">Norma</h3>
         <p class="text-gray-600">La nostra cuoca, esperta in cucina tradizionale, porta in tavola ricette di famiglia
           tramandate da generazioni.</p>
       </div>
+      
       <!-- Membro 3: Marta -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-b-2 border-primary">
         <img src="/src/assets/team-marta.jpg" alt="Marta - Housekeeper"
-          class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="text-xl font-bold text-primary">Marta</h3>
+          class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary">
+        <h3 class="text-xl font-bold text-primary font-serif">Marta</h3>
         <p class="text-gray-600">Housekeeper con 18 anni di esperienza, attenta ai dettagli per garantire pulizia e
           comfort in ogni ambiente.</p>
       </div>
@@ -268,7 +270,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Servizio 1: Wi-Fi Gratuito -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-t-2 border-primary">
         <div class="text-primary mb-4 flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -282,7 +284,7 @@
       </div>
 
       <!-- Servizio 2: Colazione Bio -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-t-2 border-primary">
         <div class="text-primary mb-4 flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -296,7 +298,7 @@
       </div>
 
       <!-- Servizio 3: Accesso al Giardino -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-t-2 border-primary">
         <div class="text-primary mb-4 flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -310,7 +312,7 @@
       </div>
 
       <!-- Servizio 4: Servizio Concierge -->
-      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-t-2 border-primary">
         <div class="text-primary mb-4 flex justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -337,7 +339,7 @@
 
     <div class="flex flex-col md:flex-row items-center gap-12">
       <div class="md:w-1/2">
-        <div class="bg-white p-2 rounded-lg shadow-lg">
+        <div class="bg-white p-2 rounded-lg shadow-xl border-2 border-primary">
           <div class="relative" style="padding-top: 56.25%">
             <iframe class="absolute inset-0 w-full h-full"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.8227492851443!2d10.398236!3d43.716384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d5919c03afa371%3A0x12f791bdf8319f43!2sParco%20di%20San%20Rossore%2C%2056100%20Pisa%20PI!5e0!3m2!1sit!2sit!4v1696780000000!5m2!1sit!2sit"
@@ -397,58 +399,11 @@
   </div>
 </section>
 
-<!-- Sezione Social -->
-<section class="py-16">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-primary mb-4">Seguici su Instagram</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Scopri le ultime novità e i momenti speciali del B&B San Russorio.</p>
-    </div>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-      <div class="text-center">
-        <p class="text-2xl font-bold text-primary">2.000</p>
-        <p class="text-gray-600">Follower (Gennaio 2024)</p>
-      </div>
-      <div class="text-center">
-        <p class="text-2xl font-bold text-primary">4.500</p>
-        <p class="text-gray-600">Follower (Giugno 2024)</p>
-      </div>
-      <div class="text-center">
-        <p class="text-2xl font-bold text-primary">8.000</p>
-        <p class="text-gray-600">Follower (Dicembre 2024)</p>
-      </div>
-    </div>
-    <div class="text-center mt-8">
-      <p class="text-gray-600">Post più apprezzato: una foto della colazione bio in giardino, con 3.200 like e oltre 500
-        commenti.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Sezione Newsletter -->
-<section class="py-16 bg-primary text-white">
-  <div class="container mx-auto px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Iscriviti alla Nostra Newsletter</h2>
-      <p class="mb-8">Rimani aggiornato sulle nostre offerte, eventi e consigli per scoprire il meglio di Pisa.</p>
-      <form class="flex flex-col sm:flex-row gap-4">
-        <input type="email" placeholder="Il tuo indirizzo email"
-          class="flex-grow px-4 py-3 rounded-md text-gray-800 focus:outline-none">
-        <button type="submit"
-          class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-colors duration-200">
-          Iscriviti
-        </button>
-      </form>
-      <p class="mt-4 text-sm opacity-80">Rispettiamo la tua privacy. Disiscriviti in qualsiasi momento.</p>
-    </div>
-  </div>
-</section>
-
 <!-- Sezione Call to Action -->
 <section class="py-20 bg-secondary">
   <div class="container mx-auto px-6">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Pronto a Vivere l'Esperienza San Russorio?</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 font-serif">Pronto a Vivere l'Esperienza San Russorio?</h2>
       <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">Prenota il tuo soggiorno ora e scopri il fascino, il
         comfort e l'autentica ospitalità del nostro bed and breakfast.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
