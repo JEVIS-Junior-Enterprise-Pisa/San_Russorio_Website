@@ -339,10 +339,14 @@
     <div class="flex flex-col md:flex-row items-center gap-12">
       <div class="md:w-1/2">
         <div class="bg-white p-2 rounded-lg shadow-xl border-2 border-primary">
-          <div class="relative" style="padding-top: 56.25%">
-            <iframe class="absolute inset-0 w-full h-full"
+          <div class="relative h-[300px] sm:h-[400px]"> <!-- Fixed height for mobile and larger screens -->
+            <iframe 
+              class="w-full h-full"
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1348.9987608402807!2d10.364734194734046!3d43.721998039483424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1742376076839!5m2!1sit!2sit"
-              allowfullscreen loading="lazy">
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
         </div>
