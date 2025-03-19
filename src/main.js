@@ -85,3 +85,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Add preload functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Get current path to determine which images to preload
+  const path = window.location.pathname;
+  
+  // Common images to preload for all pages
+  const commonImages = [];
+  
+  // Page-specific images to preload
+  const pageSpecificImages = {
+    '/': [
+      '/src/assets/San_Russorio_B&B.jpg',
+      '/src/assets/Tenuta_San_Russorio_BW.jpeg',
+      '/src/assets/Camera_Oliva.jpg',
+      '/src/assets/Suite_del_Vigneto.jpg',
+      '/src/assets/Camera_Giardino.jpg'
+    ],
+    '/rooms': [
+      '/src/assets/Camere_Hero.jpg',
+      '/src/assets/Camera_Oliva.jpg',
+      '/src/assets/Suite_del_Vigneto.jpg',
+      '/src/assets/Camera_Giardino.jpg'
+    ],
+    '/contact': [
+      '/src/assets/Tenuta-San-Rossore.jpg'
+    ]
+  };
+  
+  // Determine which images to preload based on current page
+  const imagesToPreload = [
+    ...commonImages,
+    ...(pageSpecificImages[path] || pageSpecificImages['/'])
+  ];
+
+  // Handle production vs development paths
+  const isProduction = import.meta.env.PROD;
+  const imagePaths = isProduction 
+    ? imagesToPreload.map(path => path.replace('/src/assets/', '/assets/'))
+    : imagesToPreload;
+
+  // Create preload link elements
+  imagePaths.forEach(imageSrc => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imageSrc;
+    document.head.appendChild(link);
+  });
+});
