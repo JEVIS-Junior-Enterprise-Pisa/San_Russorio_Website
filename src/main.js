@@ -46,6 +46,7 @@ const router = () => {
         html = html.replace(/url\(\/src\/assets\//g, 'url(/assets/');
       }
       app.innerHTML = html;
+      window.scrollTo(0, 0);
     })
     .catch(error => {
       console.error('Error loading page:', error);
