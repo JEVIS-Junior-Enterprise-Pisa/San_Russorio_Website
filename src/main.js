@@ -1,21 +1,19 @@
 import './style.css';
 
-// Simple router for the SPA using History API instead of hash
+// Simple router for the SPA using History API
 const router = () => {
+  // Define routes - adjust paths based on build vs development environment
+  const isProduction = import.meta.env.PROD;
+  
   const routes = {
-    '/': '/src/pages/home.html',
-    '/rooms': '/src/pages/rooms.html',
-    '/contact': '/src/pages/contact.html',
+    '/': isProduction ? '/pages/home.html' : '/src/pages/home.html',
+    '/rooms': isProduction ? '/pages/rooms.html' : '/src/pages/rooms.html',
+    '/contact': isProduction ? '/pages/contact.html' : '/src/pages/contact.html',
     // Add more routes as needed
   };
 
   // Get current path or default to home
   let path = window.location.pathname;
-  
-  // If we're at the root with no path, default to home
-  if (path === '/') {
-    path = '/';
-  }
   
   // If path doesn't exist in routes, default to home
   if (!routes[path]) {
@@ -23,15 +21,35 @@ const router = () => {
     history.replaceState(null, null, path);
   }
 
+  // Clear previous content and show loading spinner
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <div class="flex justify-center items-center h-64">
+      <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+    </div>
+  `;
+
   // Load the content
   fetch(routes[path])
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${routes[path]}`);
+      }
+      return response.text();
+    })
     .then(html => {
-      document.getElementById('app').innerHTML = html;
+      // Fix image paths for production
+      if (isProduction) {
+        // Replace all src="/src/assets/ with src="/assets/
+        html = html.replace(/src="\/src\/assets\//g, 'src="/assets/');
+        // Also fix background images in inline styles if any
+        html = html.replace(/url\(\/src\/assets\//g, 'url(/assets/');
+      }
+      app.innerHTML = html;
     })
     .catch(error => {
       console.error('Error loading page:', error);
-      document.getElementById('app').innerHTML = '<p>Error loading page. Please try again.</p>';
+      app.innerHTML = '<div class="text-center p-10"><h2 class="text-2xl text-red-500">Pagina non trovata</h2></div>';
     });
 };
 
@@ -44,7 +62,7 @@ document.addEventListener('click', (e) => {
   const anchor = e.target.closest('a');
   
   // If it's an internal link (starts with /)
-  if (anchor && anchor.getAttribute('href').startsWith('/')) {
+  if (anchor && anchor.getAttribute('href') && anchor.getAttribute('href').startsWith('/')) {
     e.preventDefault();
     const href = anchor.getAttribute('href');
     history.pushState(null, null, href);
@@ -59,12 +77,11 @@ window.addEventListener('popstate', router);
 document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuButton = document.querySelector('button.md\\:hidden');
   if (mobileMenuButton) {
+    const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuButton.addEventListener('click', () => {
-      // Implementation for mobile menu toggle
-      alert('Mobile menu functionality will be implemented here');
+      if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+      }
     });
   }
 });
-
-console.log('San Russorio B&B website loaded');
-
