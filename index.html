@@ -61,23 +61,37 @@
         </button>
       </div>
     </div>
-
-    <!-- Menu mobile (nascosto di default) -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-      <ul class="space-y-4">
-        <li>
-          <a href="/" class="block text-gray-700 hover:text-primary font-medium text-lg px-6 py-2">
-            Il B&B
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 bg-white rounded-lg shadow-lg mx-4 transform transition-all duration-300 ease-in-out">
+      <ul class="divide-y divide-gray-100">
+        <li class="group">
+          <a href="/" class="flex items-center text-gray-700 hover:text-primary hover:bg-gray-50 font-medium text-lg px-6 py-4 transition-all duration-200">
+            <span class="relative">
+              Il B&B
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+        <li class="group">
+          <a href="/rooms" class="flex items-center text-gray-700 hover:text-primary hover:bg-gray-50 font-medium text-lg px-6 py-4 transition-all duration-200">
+            <span class="relative">
+              Le Camere
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
           </a>
         </li>
         <li>
-          <a href="/rooms" class="block text-gray-700 hover:text-primary font-medium text-lg px-6 py-2">
-            Le Camere
-          </a>
-        </li>
-        <li>
-          <a href="/contact" class="block text-primary font-medium text-lg px-6 py-2">
+          <a href="/contact" class="flex items-center justify-center bg-primary text-white font-medium text-lg px-6 py-4 mt-2 mx-4 rounded-lg shadow-md transition-all duration-300 hover:bg-primary-dark hover:shadow-lg active:transform active:scale-95">
             Contattaci
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
           </a>
         </li>
       </ul>
