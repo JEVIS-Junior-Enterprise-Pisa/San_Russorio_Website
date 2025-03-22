@@ -15,16 +15,12 @@
   <header class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
     <div class="container mx-auto flex items-center justify-between">
       <!-- Logo a sinistra -->
-      <div class="flex items-center">
-        <a href="/" class="text-primary font-bold text-2xl">
-          <img src="./src/assets/Logo_San_Russorio.png" alt="San Russorio B&B"
-            class="h-14 w-auto rounded-lg shadow-md transition-transform duration-200 hover:scale-95 active:scale-90">
-        </a>
-      </div>
+      
 
       <!-- Navigazione al centro -->
       <nav class="hidden md:block">
         <ul class="flex space-x-8">
+          <!--
           <li>
             <a href="/"
               class="text-gray-800 hover:text-primary font-semibold text-xl transition-colors duration-200 relative group">
@@ -33,6 +29,7 @@
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
             </a>
           </li>
+        -->
           <li>
             <a href="/rooms"
               class="text-gray-800 hover:text-primary font-semibold text-xl transition-colors duration-200 relative group">
@@ -43,6 +40,12 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Logo unificato -->
+      <a href="/" class="flex items-center gap-2 font-bold text-2xl transition-transform duration-200 hover:scale-95 active:scale-90">
+        <img src="./src/assets/San Russorio_1.png" alt="San Russorio B&B"
+          class="h-14 w-auto rounded-lg shadow-md">
+      </a>
 
       <!-- Contact button with smooth hover animation (hidden on mobile) -->
       <div class="hidden md:block">
@@ -233,6 +236,7 @@
       });
     });
   </script>
+  
 </body>
 
 </html>

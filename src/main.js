@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageSpecificImages = {
     '/': [
       '/src/assets/San_Russorio_B&B.jpg',
+      '/src/assets/San_Russorio_1.png',
       '/src/assets/Tenuta_San_Russorio_BW.jpeg',
       '/src/assets/Camera_Oliva.jpg',
       '/src/assets/Suite_del_Vigneto.jpg',
